@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Movies</h1>
+    
+    <form id="form">
+        <input id="input" type="text" placeholder="search ...">
+        
+        <div class="films_filter_wrapper">
+            <select id="select">
+                <option value="All">All</option>
+            </select>
+            
+            <select id="filter">
+                <option value="all">All</option>
+                <option value="a_z">A_Z</option>
+                <option value="z_a">Z_A</option>
+                <option value="new_old">New_Old</option>
+                <option value="old_new">Old_New</option>
+            </select>
+        </div>
+        
+        <button type="submit" id="btn">Submit</button>
+    </form>
+    <ul id="list"></ul>
+    <template class="templete">
+        <li class="box">
+            <img class="img" src="http://picsum.photos/300" alt="">
+            <h2 class="title">title</h2>
+            <ul class="menu"></ul>
+            <!-- <li class="li">nimadir1</li>
+                <li class="li">nimadir2</li>
+                <li class="li">nimadir3</li> -->
+                <time class="time">1.19.1970</time>
+                <button class="btn">Show more</button>
+            </li>
+        </template>
+        <script src="./js/films.js"></script>
+        <script src="./js/util.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#FFE3E3;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: gold;
+    background-color: #F8485E;
+    width: 100%;
+}
+
+img{
+    width: 250px;
+}
+
+.box {
+    width: 250px;
+    padding: 15px 10px;
+    border-radius: 7px;
+    margin-right: 40px;
+    height: 100%;
+    background-color: #FFADAD;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: .3s ease all;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box:nth-child(4n) {
+    margin-right: 0;
+}
+
+.menu{
+    padding: 0;
+}
+
+h2 {
+    color: #B97A95;
+}
+
+.li {
+    color: #FFEFBC;
+}
+
+time {
+    color: #FFFEB7;
+    margin-bottom: 10px;
+}
+#form{
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #E2C2B9;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    width: 1160px;
+    max-width: 100%;
+}
+.films_filter_wrapper{
+    display: flex;
+}
+#select{
+    margin-right: 25px;
+    box-sizing: border-box;
+    padding: 10px 7px;
+    margin-top: 10px;
+    width: 100%;
+    border:none;
+    outline: none;
+}
+#filter{
+    box-sizing: border-box;
+    padding: 10px 7px;
+    margin-top: 10px;
+    width: 100%;
+    border:none;
+    outline: none;
+}
+#input{
+    box-sizing: border-box;
+    padding: 10px 7px;
+    margin-top: 10px;
+    width: 100%;
+    border:none;
+    outline:none;
+}
+#btn{
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #FD6F96;
+    font-weight: 600;
+    color: #fff; 
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width:450px) {
+    #list{
+       align-items: center;
+    }
+    .box{
+       margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
