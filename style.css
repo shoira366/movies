@@ -28,7 +28,9 @@ h1 {
 img{
     width: 250px;
 }
-
+.genres_list{
+    color: #A03C78;
+}
 .box {
     width: 250px;
     padding: 15px 10px;
@@ -52,7 +54,7 @@ img{
 }
 
 h2 {
-    color: #B97A95;
+    color: #A03C78;
 }
 
 .li {
@@ -60,7 +62,8 @@ h2 {
 }
 
 time {
-    color: #FFFEB7;
+    color: #91469b;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 #form{

@@ -27,6 +27,7 @@ function movies(filmsArr, element){
         film.genres.forEach((genre )=>{
             let newItem = document.createElement('li')
             newItem.textContent = genre
+            newItem.setAttribute('class', 'genres_list')
             elMenu.appendChild(newItem)
         })
         
