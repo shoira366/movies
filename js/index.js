@@ -4,7 +4,15 @@ const elSelect = getElem('#select', elForm);
 const elFilter = getElem('#filter', elForm);
 const elList = document.querySelector('#list');
 const elTemplete = document.querySelector('.templete').content
-
+const bigModal = document.querySelector('.modal')
+const miniModal = document.querySelector('.modalmini')
+const closeBtn = getElem('.closebtn', miniModal);
+const newTitle = getElem('.new_title', miniModal);
+const newImg = getElem('.new_img', miniModal);
+const newTime = getElem('.new_time', miniModal);
+const newDiv = getElem('.new_div', miniModal);
+const newText = getElem('.new_text', miniModal);
+const Link = getElem('.link', miniModal)
 
 
 
@@ -18,10 +26,11 @@ function movies(filmsArr, element){
         getElem('.title', cloneTemplete).textContent = film.title;
         getElem('.time', cloneTemplete).textContent = newDate(film.release_date);
         getElem('.time', cloneTemplete).datetype = newDate(film.release_date);
+        // getElem('.btn', cloneTemplete).textContent = 'Show more'
+        const elShow = getElem('.btn', cloneTemplete)
         
         let elMenu = getElem('.menu', cloneTemplete)
         
-        element.appendChild(cloneTemplete)
         
         
         film.genres.forEach((genre )=>{
@@ -31,6 +40,64 @@ function movies(filmsArr, element){
             elMenu.appendChild(newItem)
         })
         
+        elShow.dataset.id = film.id
+        
+        elShow.addEventListener('click', (evt)=>{
+            bigModal.classList.add('modal-active');
+            miniModal.classList.add('miniactiv');
+            const filmId = evt.target.dataset.id
+
+            let result = filmsArr.find(element => element.id === filmId)
+
+            newImg.setAttribute('src', result.poster)
+            newTitle.textContent = result.title;
+            newTime.textContent = newDate(film.release_date);
+            newTime.datatype = newDate(film.release_date);
+            newText.textContent = result.overview;
+            Link.textContent = 'Watch movie';
+            Link.setAttribute('target', 'blank')
+            Link.setAttribute('href', film.link)
+
+            // const filmId = e.target.dataset.id
+            // film.find(elem => elem.id === filmId)
+            
+            // let newImg = document.createElement('img');
+            // let newDiv = document.createElement('div')
+            // let newTitle = document.createElement('h2');
+            // let newTime = document.createElement('time');
+            // let newOverview = document.createElement('p');
+            // let link = document.createElement('a')
+            
+            
+            // newImg.setAttribute('src', film.poster);
+            // newDiv.setAttribute('class', 'newdiv')
+            // newTitle.textContent = film.title;
+            // newTitle.setAttribute('class','newtitle')
+            // newTime.textContent = newDate(film.release_date);
+            // newTime.datatype = newDate(film.release_date);
+            // newOverview.textContent = film.overview;
+            // newOverview.setAttribute('class', 'overview');
+            // link.textContent = 'Watch short video';
+            // link.setAttribute('href', film.link);
+            // link.setAttribute('target', 'blank');
+            // link.setAttribute('class', 'link')
+            
+            
+            // newDiv.appendChild(newTitle);
+            // newDiv.appendChild(newTime);
+            // newDiv.appendChild(newOverview);
+            // newDiv.appendChild(link)
+            
+            // miniModal.appendChild(newImg)
+            // miniModal.appendChild(newDiv)
+        })
+        
+        closeBtn.addEventListener('click', ()=>{
+            bigModal.classList.remove('modal-active');
+            miniModal.classList.remove('miniactiv')
+        })
+        
+        element.appendChild(cloneTemplete)
     })
     
     

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -30,6 +33,20 @@
         <button type="submit" id="btn">Submit</button>
     </form>
     <ul id="list"></ul>
+
+    <div class="modal">
+        <div class="modalmini">
+            <img class="new_img" src="http://picsum.photos/250" alt="">
+            <div class="new_div">
+                <h2 class="new_title"></h2>
+                <time class="new_time">6463131</time>
+                <p class="new_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, molestiae.</p>
+                <a class="link" href="#">Watch short video</a>
+            </div>
+            <button class="closebtn"><i class="fas fa-times fa-2x"></i></button>
+        </div>
+    </div>
+
     <template class="templete">
         <li class="box">
             <img class="img" src="http://picsum.photos/300" alt="">
