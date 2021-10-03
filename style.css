@@ -177,7 +177,6 @@ time {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 15px;
 }
 
 .new_title{
