@@ -160,7 +160,8 @@ time {
     background-color: #FFE3E3;
     width: 700px;
     height: 400px;
-    top: 25%;
+    max-width: 100%;
+    top: 20%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -181,7 +182,8 @@ time {
 }
 
 .new_text{
-    width: 300px;
+    /* width: 300px; */
+    max-width: 100%;
     margin-top: 10px;
 }
 
