@@ -49,7 +49,7 @@ function movies(filmsArr, element){
 
             let result = filmsArr.find(element => element.id === filmId)
 
-            newImg.setAttribute('src', result.poster)
+            // newImg.setAttribute('src', result.poster)
             newTitle.textContent = result.title;
             newTime.textContent = newDate(film.release_date);
             newTime.datatype = newDate(film.release_date);
@@ -58,38 +58,7 @@ function movies(filmsArr, element){
             Link.setAttribute('target', 'blank')
             Link.setAttribute('href', film.link)
 
-            // const filmId = e.target.dataset.id
-            // film.find(elem => elem.id === filmId)
-            
-            // let newImg = document.createElement('img');
-            // let newDiv = document.createElement('div')
-            // let newTitle = document.createElement('h2');
-            // let newTime = document.createElement('time');
-            // let newOverview = document.createElement('p');
-            // let link = document.createElement('a')
-            
-            
-            // newImg.setAttribute('src', film.poster);
-            // newDiv.setAttribute('class', 'newdiv')
-            // newTitle.textContent = film.title;
-            // newTitle.setAttribute('class','newtitle')
-            // newTime.textContent = newDate(film.release_date);
-            // newTime.datatype = newDate(film.release_date);
-            // newOverview.textContent = film.overview;
-            // newOverview.setAttribute('class', 'overview');
-            // link.textContent = 'Watch short video';
-            // link.setAttribute('href', film.link);
-            // link.setAttribute('target', 'blank');
-            // link.setAttribute('class', 'link')
-            
-            
-            // newDiv.appendChild(newTitle);
-            // newDiv.appendChild(newTime);
-            // newDiv.appendChild(newOverview);
-            // newDiv.appendChild(link)
-            
-            // miniModal.appendChild(newImg)
-            // miniModal.appendChild(newDiv)
+          
         })
         
         closeBtn.addEventListener('click', ()=>{
