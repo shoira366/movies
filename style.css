@@ -21,15 +21,83 @@ body {
 li {
     list-style-type: none;
 }
+header{
+    position: relative;
+    background-color: #F8485E;
+    display: flex;
+    align-items: center;
+    width: 100%;
 
+}
 h1 {
     text-align: center;
     text-transform: uppercase;
     color: gold;
-    background-color: #F8485E;
     width: 100%;
 }
+.add-btn{
+    cursor: pointer;
+    background-color:transparent;
+    border: none;
+    position: absolute;
+    right: 25px;
+}
 
+.counter{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 18px;
+    margin-top: 13px;
+    z-index: 1;
+}
+
+.modal_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Modal */
+
+.big-modal{
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.20);
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.open-modal{
+    display: block;
+}
+.small-modal{
+    overflow: auto;
+    z-index: 2;
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    background-color: rosybrown;
+    margin-left: auto;
+    transform: translateX(1000px);
+    transition: ease all 1s;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.open-smallmodal{
+    transform: translateX(490px);
+}
+.close-modal{
+    cursor: pointer;
+    background-color:transparent;
+    border: none;
+    position: absolute;
+}
 img {
     width: 250px;
     max-width: 100%;
@@ -53,6 +121,12 @@ img {
     flex-direction: column;
 }
 
+.del_btn{
+    display: none;
+}
+.act_sel-btn{
+    display: block;
+}
 .box:nth-child(4n) {
     margin-right: 0;
 }
@@ -68,11 +142,19 @@ h2 {
 .li {
     color: #FFEFBC;
 }
-
+.mini-div{
+    margin-bottom: 10px;
+}
 time {
     color: #91469b;
     font-weight: 600;
-    margin-bottom: 10px;
+}
+
+.press_btn{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-left: 110px;
 }
 
 #form {
@@ -137,6 +219,7 @@ time {
     border: none;
     font-size: 20px;
     padding: 10px 0;
+    cursor: pointer;
 }
 .modal {
     background-color: rgba(0, 0, 0, 0.50);

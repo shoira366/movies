@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>Movies</h1>
-    
+    <header>
+        <h1>Movies</h1>
+        <button class="add-btn">
+            <i style="color: gold;" class="far fa-envelope fa-2x"></i>
+        </button>
+        <span class="counter">0</span>
+    </header>
+    <div class="big-modal">
+    </div>
+    <div class="small-modal">
+        <button class="close-modal">
+            <i class="fas fa-times fa-2x"></i>
+        </button>
+        <ul class="modal_menu"></ul>
+        <!-- <ul class="modal_minimenu"></ul> -->
+        
+    </div>
+
+
     <form id="form">
         <input id="input" type="text" placeholder="search ...">
-        
+
         <div class="films_filter_wrapper">
             <select id="select">
                 <option value="All">All</option>
             </select>
-            
+
             <select id="filter">
                 <option value="all">All</option>
                 <option value="a_z">A_Z</option>
@@ -29,7 +48,7 @@
                 <option value="old_new">Old_New</option>
             </select>
         </div>
-        
+
         <button type="submit" id="btn">Submit</button>
     </form>
     <ul id="list"></ul>
@@ -55,12 +74,19 @@
             <!-- <li class="li">nimadir1</li>
                 <li class="li">nimadir2</li>
                 <li class="li">nimadir3</li> -->
-                <time class="time">1.19.1970</time>
-                <button class="btn">Show more</button>
-            </li>
-        </template>
-        <script src="./js/films.js"></script>
-        <script src="./js/util.js"></script>
-        <script src="./js/index.js"></script>
-    </body>
-    </html>
+           <div class="mini-div">
+            <time class="time">1.19.1970</time>
+            <i class="press_btn far fa-envelope fa-2x"></i>
+            <!-- <i class="del_btn far fa-trash-alt"></i> -->
+            <!-- <button id="press_btn">
+            </button> -->
+           </div>
+            <button class="btn">Show more</button>
+        </li>
+    </template>
+    <script src="./js/films.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
